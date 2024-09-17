@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply tabular-nums box-border;
+
+    box-sizing: border-box;
+  }
+
+  img {
+    @apply select-none;
+  }
+
+  :host,
+  html {
+    @apply leading-7 text-base antialiased font-sans tabular-nums transition-all duration-300 list-none scroll-smooth;
+
+    text-size-adjust: 100%;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    tab-size: 4;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+
+  body {
+    @apply bg-background text-primary transition-colors duration-200 ease-in;
+  }
+
+  body.scav {
+    @apply bg-background;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans font-bold leading-5 text-primary;
+  }
+
+  p {
+    @apply font-sans font-normal leading-7 text-primary;
+  }
+
+  a {
+    @apply text-primary no-underline transition-colors duration-200 ease-in;
+  }
+
+  span {
+    @apply font-sans font-normal leading-7 text-primary;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 80% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 80% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 80% 13%;
+    --primary: 191 59% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 80% 13%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 80% 13%;
+    --muted-foreground: 191 59% 48%;
+    --accent: 240 80% 13%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 80% 13%;
+    --input: 240 80% 13%;
+    --ring: 191 59% 48%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 80% 13%;
+    --foreground: 0 0% 100%;
+    --card: 240 80% 13%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 80% 13%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 191 59% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 40% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 40% 20%;
+    --muted-foreground: 191 59% 70%;
+    --accent: 240 40% 20%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 40% 20%;
+    --input: 240 40% 20%;
+    --ring: 191 59% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
